@@ -9,7 +9,7 @@ const app = express();
 // Adjust origin when deployed.
 app.use(
 	cors({
-		origin: ["http://localhost:5173", "http://localhost:3000", "https://turomoko-ai.vercel.app/"],
+		origin: ["http://localhost:5173", "http://localhost:3000", "https://turomoko-ai.vercel.app"],
 		methods: ["GET", "POST"],
 		credentials: false,
 	})
