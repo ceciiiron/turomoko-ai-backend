@@ -9,7 +9,7 @@ const app = express();
 // Adjust origin when deployed.
 app.use(
 	cors({
-		origin: ["http://localhost:5173", "http://localhost:3000"],
+		origin: ["http://localhost:5173", "http://localhost:3000", "https://turomoko-ai.vercel.app/"],
 		methods: ["GET", "POST"],
 		credentials: false,
 	})
@@ -178,5 +178,5 @@ app.post("/api/chat", async (req, res) => {
 
 const port = Number(process.env.PORT || 4000);
 app.listen(port, () => {
-	console.log(`✅ API running on http://localhost:${port}`);
+	console.log(`✅ API running on ${process.env.APP_BASE_URL}:${port}`);
 });
